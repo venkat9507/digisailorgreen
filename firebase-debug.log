@@ -1,0 +1,30 @@
+[debug] [2020-07-12T03:46:00.580Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T03:46:00.584Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy --project digiweb
+[debug] [2020-07-12T03:46:00.585Z] CLI Version:   8.5.0
+[debug] [2020-07-12T03:46:00.585Z] Platform:      linux
+[debug] [2020-07-12T03:46:00.585Z] Node Version:  v10.19.0
+[debug] [2020-07-12T03:46:00.586Z] Time:          Sun Jul 12 2020 09:16:00 GMT+0530 (India Standard Time)
+[debug] [2020-07-12T03:46:00.586Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T03:46:00.587Z] 
+[debug] [2020-07-12T03:46:00.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-12T03:46:00.606Z] > authorizing via signed-in user
+[debug] [2020-07-12T03:46:00.606Z] [iam] checking project digiweb for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-12T03:46:00.613Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/digiweb:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-07-12T03:46:02.381Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 03:46:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1139","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T03:46:02.387Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/digiweb  
+ 
+[debug] [2020-07-12T03:46:03.655Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 03:46:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'digiweb'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-07-12T03:46:03.668Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/digiweb/versions  
+ {"config":{"cleanUrls":true},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-07-12T03:46:06.430Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 03:46:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[digiweb]: beginning deploy... 
+[info] i  hosting[digiweb]: found 212 files in public 
+[debug] [2020-07-12T03:46:06.576Z] [hosting] hash cache [cHVibGlj] stored for 212 files
+[debug] [2020-07-12T03:46:06.577Z] [hosting][hash queue][FINAL] {"max":44,"min":0,"avg":2.9571573416552903,"active":0,"complete":212,"success":212,"errored":0,"retried":0,"total":212,"elapsed":50}
+[debug] [2020-07-12T03:46:06.577Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/digiweb/versions/87932407f769abaf:populateFiles  
+ <request body omitted>
