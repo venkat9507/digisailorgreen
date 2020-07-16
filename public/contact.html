@@ -32,6 +32,28 @@
 
         <title>Digisailor</title>
 
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+<script>
+		function sendEmail() {
+			var name = document.getElementById("name").value
+			var email = document.getElementById("email").value	
+            var phone_number = document.getElementById("phone_number").value
+            var message = document.getElementById("message").value
+            var subject = document.getElementById("subject").value
+	  Email.send({
+          SecureToken : "7210049b-6ed6-44d5-86bb-5a8287e61575",
+		  To : "digisailors@gmail.com",
+		  From : "mailtodigisailor@gamil.com",
+		  Subject : subject,
+	  Body :"name="+name +"\n email=" +email + "\n phone_number=" +phone_number  +"\n message=" +message
+  }).then( message => alert("Thanks for contacting Digisailor")
+  )
+  setTimeout(() =>{
+	window.location.reload(true);	
+}, 5950);
+}
+</script>
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
       
  </head>
@@ -196,7 +218,7 @@
 
                     <div class="col-lg-7 col-md-12">
                         <div class="contact-form">
-                            <form id="contactForm">
+                            
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
@@ -221,7 +243,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
+                                            <input type="text" name="msg_subject" id="subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -234,12 +256,12 @@
                                     </div>
 
                                     <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                        <button type="submit" class="btn btn-primary" id="submit" name="submit-form" onclick="sendEmail();">Send Message</button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>
