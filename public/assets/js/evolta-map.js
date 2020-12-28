@@ -15,7 +15,7 @@
         map: map,
         draggable: true,
         animation: google.maps.Animation.DROP,
-        position: {lat: 8.788779, lng: 78.1359641}
+        position: {lat: 8.7930081, lng: 78.1206135}
         });
         marker.addListener('click', toggleBounce);
     }
