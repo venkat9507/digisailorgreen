@@ -1,0 +1,42 @@
+[debug] [2021-03-01T16:12:08.605Z] ----------------------------------------------------------------------
+[debug] [2021-03-01T16:12:08.607Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --project digiweb
+[debug] [2021-03-01T16:12:08.607Z] CLI Version:   9.5.0
+[debug] [2021-03-01T16:12:08.607Z] Platform:      win32
+[debug] [2021-03-01T16:12:08.608Z] Node Version:  v15.3.0
+[debug] [2021-03-01T16:12:08.609Z] Time:          Mon Mar 01 2021 21:42:08 GMT+0530 (India Standard Time)
+[debug] [2021-03-01T16:12:08.609Z] ----------------------------------------------------------------------
+[debug] [2021-03-01T16:12:08.609Z] 
+[debug] [2021-03-01T16:12:08.611Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-03-01T16:12:08.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-01T16:12:08.632Z] > authorizing via signed-in user
+[debug] [2021-03-01T16:12:08.633Z] [iam] checking project digiweb for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-01T16:12:08.634Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-01T16:12:08.634Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-01T16:12:09.379Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-03-01T16:12:09.379Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-03-01T16:12:29.711Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-03-01T16:12:29.713Z] > refreshing access token with scopes: []
+[debug] [2021-03-01T16:12:29.713Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-01T16:12:50.772Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-03-01T16:12:51.098Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:26:12)
+    at refreshTokens (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:297:15)
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+    at async Client.getAccessToken (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:289:21)
+    at async Object.getDefaultHostingSite (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\rajab\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:161:17
+[error] 
+[error] Error: Failed to get Firebase project digiweb. Please make sure the project exists and your account has permission to access it.
